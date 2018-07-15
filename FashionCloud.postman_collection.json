@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "da154cb1-2f8f-4127-b789-5d97b471c757",
+		"name": "FashionCloud",
+		"description": "Emad Rawashdeh for FashionCloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get ToDo List Before",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2650fe4c-0641-4521-9ad2-a7f4a34f69dc",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is \"+responseCode.code ] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost/api/todos",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e84b525-116c-433b-adab-d9c6e19351df",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is \"+responseCode.code ] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{text: \"a\"}"
+				},
+				"url": {
+					"raw": "localhost/api/todos",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ToDo List After",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2650fe4c-0641-4521-9ad2-a7f4a34f69dc",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is \"+responseCode.code ] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost/api/todos",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
